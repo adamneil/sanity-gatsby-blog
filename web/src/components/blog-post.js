@@ -1,19 +1,30 @@
-import {format, distanceInWords, differenceInDays} from 'date-fns'
-import React from 'react'
-import {buildImageObj} from '../lib/helpers'
-import {imageUrlFor} from '../lib/image-url'
+import { format, distanceInWords, differenceInDays } from 'date-fns'
+import React , { useRef }from 'react'
+import { buildImageObj } from '../lib/helpers'
+import { imageUrlFor } from '../lib/image-url'
 import PortableText from './portableText'
 import Container from './container'
 import AuthorList from './author-list'
-
+import ReactDOM from 'react-dom'
+// import { Button } from 'react-bootstrap'
 import styles from './blog-post.module.css'
 
-function BlogPost (props) {
-  const {_rawBody, authors, categories, title, mainImage, publishedAt} = props
+const scrollToRef = (ref) => window.scrollTo({
+  top: ref.current.offsetTop,
+  behavior: 'smooth'
+  
+});
+
+function BlogPost(props) {
+
+  const myRef = useRef(null)
+  const executeScroll = () => scrollToRef(myRef)
+  const { _rawBody, authors, categories, title, mainImage, publishedAt } = props
   return (
     <article className={styles.root}>
       {mainImage && mainImage.asset && (
         <div className={styles.mainImage}>
+
           <img
             src={imageUrlFor(buildImageObj(mainImage))
               .width(1200)
@@ -22,11 +33,20 @@ function BlogPost (props) {
               .auto('format')
               .url()}
             alt={mainImage.alt}
+            style={{ opacity: 0.7 }}
           />
+          <div className={styles.centered}>
+            <h1 className={styles.title_header}>{title}</h1>
+            <div style={{ textAlign: 'center' }}>
+                <button onClick={executeScroll} className={styles.example_a}>
+                  Read More
+            </button>
+            </div>
+          </div>
         </div>
       )}
       <Container>
-        <div className={styles.grid}>
+        <div className={styles.grid} ref={myRef}>
           <div className={styles.mainContent}>
             <h1 className={styles.title}>{title}</h1>
             {_rawBody && <PortableText blocks={_rawBody} />}

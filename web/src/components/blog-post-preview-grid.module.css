@@ -34,7 +34,7 @@
 .browseMoreNav {
   composes: small from './typography.module.css';
   margin-top: 1rem;
-  text-align: right;
+  text-align: center;
 
   @nest & a {
     display: inline-block;
