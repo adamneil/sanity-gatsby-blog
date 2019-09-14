@@ -2,6 +2,7 @@ import {Link} from 'gatsby'
 import React from 'react'
 import Icon from './icon'
 import {cn} from '../lib/helpers'
+import Logo from '../logo.png'
 
 import styles from './header.module.css'
 
@@ -9,7 +10,7 @@ const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => (
   <div className={styles.root}>
     <div className={styles.wrapper}>
       <div className={styles.branding}>
-        <img src="/logo.png" style={{height: 40, verticalAlign: 'middle'}} />
+        <img src={Logo} style={{height: 40, verticalAlign: 'middle'}} />
         <Link to='/'>{siteTitle}</Link>
       </div>
 
