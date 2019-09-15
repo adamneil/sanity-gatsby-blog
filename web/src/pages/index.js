@@ -11,6 +11,8 @@ import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import BlogPostPreviewGrid from '../components/blog-post-preview-grid'
+import '../pages/bootstrap.min.css'
+import '../pages/material-kit.css'
 
 export const query = graphql`
   fragment SanityImage on SanityMainImage {

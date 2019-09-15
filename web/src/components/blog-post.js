@@ -38,7 +38,7 @@ function BlogPost(props) {
           <div className={styles.centered}>
             <h1 className={styles.title_header}>{title}</h1>
             <div style={{ textAlign: 'center' }}>
-                <button onClick={executeScroll} className={styles.example_a}>
+                <button onClick={executeScroll} className='btn btn-primary btn-large'>
                   Read More
             </button>
             </div>

@@ -14,13 +14,22 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.10.2",
+    "@fortawesome/free-solid-svg-icons": "^5.10.2",
+    "@fortawesome/react-fontawesome": "^0.1.4",
     "@sanity/cli": "^0.140.17",
-    "lerna": "^3.13.1"
+    "lerna": "^3.13.1",
+    "react-ionicons": "^3.0.1"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.22",
     "bootstrap": "^4.3.1",
+    "gatsby-plugin-postcss": "^2.1.7",
     "jquery": "^3.4.1",
+    "material-kit": "^2.0.4",
     "react-bootstrap": "^1.0.0-beta.12",
-    "react-scroll-into-view": "^1.5.3"
+    "react-fontawesome": "^1.6.1",
+    "react-scroll-into-view": "^1.5.3",
+    "reactstrap": "^8.0.1"
   }
 }
