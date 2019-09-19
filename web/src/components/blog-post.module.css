@@ -4,8 +4,7 @@
 .root {
 }
 
-.title_header,
-h1 {
+.title_header {
   composes: responsiveTitle1 from "./typography.module.css";
   text-align: center;
 }
