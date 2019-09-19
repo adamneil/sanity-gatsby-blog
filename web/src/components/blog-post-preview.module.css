@@ -1,5 +1,5 @@
-@import '../styles/custom-media.css';
-@import '../styles/custom-properties.css';
+@import "../styles/custom-media.css";
+@import "../styles/custom-properties.css";
 
 .root {
   display: blog;
@@ -18,7 +18,7 @@
 }
 
 .img_rounded {
-  border-radius: 0.80em;
+  border-radius: 0.8em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .inGrid {
